@@ -1,33 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic);
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-optical-sizing: auto;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.containerFull {
+  width: 100%;
+  display: flex;
+}
+
+.containerInner {
+  width: 1170px;
+  margin: 0 auto;
+
+  @media(max-width: 1170px) and (min-width: 1024px) {
+    width: 1024px;
+  }
+
+  @media(max-width: 1024px) and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media(max-width: 768px) and (min-width: 500px) {
+    width: 500px;
+  }
+
+  @media(max-width: 500px) {
+    width: 100%;
   }
 }

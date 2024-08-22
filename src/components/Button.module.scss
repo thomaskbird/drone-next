@@ -1,0 +1,33 @@
+$white: #fff;
+
+.btn {
+  font-weight: 100;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: all ease-in .25s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.solid {
+  &.primary {
+    border: none;
+    color: #c40325;
+    background: $white;
+  }
+}
+
+.outlined {
+  &.primary {
+    color: $white;
+    border: 2px solid $white;
+    background: transparent;
+
+    &:active {
+      background: rgba(255,255,255,.2);
+    }
+  }
+}

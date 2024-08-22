@@ -1,0 +1,72 @@
+.wrapper {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  align-content: center;
+}
+
+.branding {
+  color: #fff;
+  padding: 10px;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.brandingLogoBold {
+  font-weight: 500;
+}
+
+.brandingLogoThin {
+  font-weight: 100;
+}
+
+.right {
+  align-content: center;
+
+  .menuIcon {
+    color: #fff;
+    display: none;
+
+    @media(max-width: 768px) {
+      display: block;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1170px) {
+      gap: 20px;
+    }
+
+    @media(max-width: 1024px) {
+      gap: 0;
+    }
+  }
+
+  a {
+    padding: 10px 20px;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    transition: all ease-in .25s;
+
+    &:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    @media(max-width: 1170px) {
+      padding: 5px 10px;
+    }
+  }
+}
